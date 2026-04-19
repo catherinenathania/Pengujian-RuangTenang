@@ -7,12 +7,12 @@ Dokumentasi ini menyajikan hasil evaluasi keamanan aplikasi RuangTenang dengan m
 
 | Kode | Kategori Risiko (OWASP 2021) | Temuan Praktik & Bukti Teknis | Status |
 | :--- | :--- | :--- | :--- |
-| **A01** | **Broken Access Control** | Rute dasbor telah menggunakan middleware `auth`. Namun, area database (phpMyAdmin) masih terbuka tanpa proteksi IP. | ** Warning** |
-| **A02** | **Cryptographic Failures** | Aplikasi beroperasi pada protokol HTTP. Data sensitif dikirimkan tanpa enkripsi SSL/TLS (Berdasarkan praktik Bab 5). | ** High** |
+| **A01** | **Broken Access Control** | Rute dasbor telah menggunakan middleware `auth`. Namun, area database (phpMyAdmin) masih terbuka tanpa proteksi IP. | **Warning** |
+| **A02** | **Cryptographic Failures** | Aplikasi beroperasi pada protokol HTTP. Data sensitif dikirimkan tanpa enkripsi SSL/TLS (Berdasarkan praktik Bab 5). | **High** |
 | **A03** | **Injection** | Penggunaan Eloquent ORM pada `AuthController` memastikan semua input melalui *parameterized queries*. | **Safe** |
-| **A05** | **Security Misconfiguration** | Berkas `.env` menunjukkan `APP_DEBUG=true` dan penggunaan user `root` tanpa password pada XAMPP (Berdasarkan praktik Bab 4). | ** High** |
-| **A06** | **Vulnerable and Outdated Components** | Versi Laravel (12.15.0) dan Guzzle (7.9.3) berada pada rilis terbaru dan stabil (Berdasarkan praktik Bab 4). | ** Safe** |
-| **A07** | **Identification and Authentication Failures** | Tidak ada *Rate Limiting* (Throttle) pada login dan absennya `session()->regenerate()` setelah login (Berdasarkan praktik Bab 6). | ** High** |
+| **A05** | **Security Misconfiguration** | Berkas `.env` menunjukkan `APP_DEBUG=true` dan penggunaan user `root` tanpa password pada XAMPP (Berdasarkan praktik Bab 4). | **High** |
+| **A06** | **Vulnerable and Outdated Components** | Versi Laravel (12.15.0) dan Guzzle (7.9.3) berada pada rilis terbaru dan stabil (Berdasarkan praktik Bab 4). | **Safe** |
+| **A07** | **Identification and Authentication Failures** | Tidak ada *Rate Limiting* (Throttle) pada login dan absennya `session()->regenerate()` setelah login (Berdasarkan praktik Bab 6). | **High** |
 
 ---
 
